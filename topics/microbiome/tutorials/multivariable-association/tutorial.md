@@ -60,8 +60,9 @@ handling of sparsity, and treatment of compositional data. Some of them are ment
 ![sensitivity and false discovery rate (FDR) across different tools](https://journals.plos.org/ploscompbiol/article/figure/image?size=large&id=10.1371/journal.pcbi.1009442.g004 "Source: <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1009442#pcbi-1009442-g004">sensitivity and false discovery rate (FDR) across different tools</a>"){:width="60%"} 
 
 The above figure compares various tools for differential abundance detection (Panel A) and multivariable association detection (Panel B) in microbiome studies, based on sensitivity and false discovery rate (FDR).\
-**Sensitivity** measures how well the methods detect true signals, higher values lead to better performance.\
-**False discovery rate (FDR)** measures the proportion of false positives among detected signals (lower FDR is better).\
+- **Sensitivity** measures how well the methods detect true signals, higher values lead to better performance.\
+- **False discovery rate (FDR)** measures the proportion of false positives among detected signals (lower FDR is better).\
+
 MaAsLin2 is the clear standout for both differential abundance detection and multivariable association detection, showing high sensitivity and maintaining a low FDR.
 
 > <agenda-title></agenda-title>
@@ -92,7 +93,7 @@ In this tutorial, the two input files used are:
 -  `HMP2_taxonomy.tsv` or features file
 -  `HMP2_metadata.tsv` or metadata file
 
-The files provided were generated from the HMP2 data. To download [Click here](https://ibdmdb.org/)
+The files provided were generated from the [Inflammatory Bowel Disease Multi'omics Database](https://ibdmdb.org/).
  
 The **HMP2_taxonomy.tsv** and **HMP2_metadata.tsv** files are part of the **Human Microbiome Project 2 (HMP2)**, which is a key component of the Inflammatory Bowel Disease Multi'omics Database ({% cite IBDMDB %}). The IBDMDB is a large-scale, multi-omic research initiative aimed at understanding the microbiome's role in IBD progression by integrating various omics data like metagenomics, metabolomics, and host genetics. 
 
@@ -179,8 +180,6 @@ Several tools available on Galaxy can generate outputs that are compatible with 
     - Metadata File: As with other tools, the sample metadata used in MetaPhlAn analysis can also be reused in MaAsLin2.
 
 
-
-
 # Find associations between the two groups
 Now we will find significant associations between microbial features(features file) and metadata variables (metadata file) using the **MaAslin2** tool
 
@@ -198,17 +197,53 @@ Now we will find significant associations between microbial features(features fi
 
 Let's now understand the role of each parameter in the tool.
 
-1. **Interactions: Fixed effects**: Fixed effects are the factors in your model that you want to study and draw conclusions about. These are the variables you hypothesize have a direct and consistent influence on the outcome. For example, you are studying how different diets affect gut microbiome composition, then diet would be a fixed effect because you’re specifically interested in understanding how different diets influence the microbiome. You might also include other fixed effects like age and gender to control for their impact.
+### 1. Fixed Effects
 
-3. **Random effects**: In some studies, like those following people over time or studying families, samples from the same group can be similar. MaAsLin2 helps handle this by letting researchers choose a grouping factor. This helps make sure the statistical analysis is more accurate. For example, setting random_effects = "Subject_ID" helps control for the correlation between samples that come from the same individual.
+**Definition:**
+Fixed effects are variables whose levels are of primary interest and are consistent and reproducible. In other words, the categories or values of a fixed effect are deliberately chosen and exhaustively represent the conditions you want to study.
 
-4. **Reference**: It allows researchers to establish a baseline or standard feature file category against which other categories are compared, helping to interpret and understand the effects of different variables on microbial features. 
+**Characteristics:**
+
+* Levels are **fixed and known** (e.g., treatment groups, gender, diet type).
+* Focus is on the **effect of each level** on the outcome.
+* Assumes that the observed levels are the **only levels of interest**.
+
+**Example:**
+If we are studying the effect of three diets (`DietA`, `DietB`, `DietC`) on gut microbiome composition, **diet** would be a fixed effect because we are specifically interested in comparing these three diets.
+
+### 2. Random Effects
+
+**Definition:**
+Random effects are variables where the levels are considered as a **random sample from a larger population**. They account for **unobserved heterogeneity** and repeated measurements, helping control for correlation between observations.
+
+**Characteristics:**
+
+* Levels are **randomly sampled** (e.g., subjects, batches, locations).
+* Focus is on **variability across levels**, not the effect of a specific level.
+* Useful for **hierarchical or repeated-measures data**.
+
+**Example:**
+In a study where multiple microbiome samples are taken from each individual, **subject ID** is a random effect. This accounts for individual-specific variability while estimating the effect of diet.
+
+### Fixed Effects vs Random Effects
+
+| Feature        | Fixed Effects                 | Random Effects                     |
+| -------------- | ----------------------------- | ---------------------------------- |
+| Levels         | Pre-determined and meaningful | Randomly sampled from a population |
+| Interest       | Effect of each specific level | Variability among levels           |
+| Example        | Diet, treatment group         | Subject ID, batch, location        |
+| Interpretation | Direct comparison of levels   | Contribution of variance to model  |
+
+
+### 2. Reference for Effects
+
+If more then 2 groups of a effect are present one needs to establish a baseline or standard feature file category against which other categories are compared, helping to interpret and understand the effects of different variables on microbial features. 
 
    > <comment-title></comment-title>
    > - In MaAslin2, the reference level is required for variables with more than two levels to avoid errors. 
-   > - Reference for a variable with more than two levels is provided as a string of `variable, reference`.
+   > - Reference for a variable with more than two levels is provided as a string of `variable,reference`.
    > - Reference for more than one variable having more than two levels each is provided as a string of `variable1,reference1,variable2,reference2`.
-   > - Example, both diagnosis and site variable have more than two levels hence reference can be provided as `diagnosis, CD, site, Cedars-Sinai`.
+   > - Example, both diagnosis and site variable have more than two levels hence reference can be provided as `diagnosis,CD,site,Cedars-Sinai`.
    {: .comment}
 
 **Additional options** :
@@ -291,7 +326,6 @@ For more information on correction methods, [click here](https://www.rdocumentat
 13. **heatmap_first_n**: In heatmap, plot top N features with significant associations [ Default: 50 ]
 14.  **plot_scatter**: Generate scatter plots for the significant associations [ Default: TRUE ]
 15.   **cores**: The number of R processes to run in parallel [ Default: 1 ]
-
 
 # Reading Output Files
 The tool generates the following five major files:
