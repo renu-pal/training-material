@@ -464,7 +464,7 @@ This is the effect size representing how strongly the abundance of Alistipes sha
 
 In essence, uncovering associations between microbial features and metadata variables through tools like MaAsLin2 not only deepens our understanding of microbiome dynamics but also holds promise for clinical applications, personalized health strategies, and advancing the field of microbiome research.
 
-The results obtained from MaAslin2 can further be visualized using tools like [**phyloseq**](https://training.galaxyproject.org/training-material/by-tool/interactive_tool_phyloseq.html).\
+The results obtained from MaAslin2 can further be visualized using tools like [**phyloseq**]({% link by-tool/interactive_tool_phyloseq.md %}).\
 Tools such as phyloseq necessitate that users prepare and structure their data prior to visualization. This preparation may include subsampling features to retain only those that are statistically significant using tools like [**ampvis**](https://usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fiuc%2Fampvis2_subset_taxa%2Fampvis2_subset_taxa%2F2.8.9%2Bgalaxy0&version=latest), as well as organizing the data into appropriate formats, such as an OTU/ASV table and accompanying metadata.\
 Once the data is prepared, phyloseq can be used to create a range of plots, such as:
 
