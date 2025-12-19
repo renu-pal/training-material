@@ -215,30 +215,34 @@ Let's now understand the role of each parameter in the tool.
 
 ### 1. Fixed Effects
 
-**Definition:**
+#### Definition
+
 Fixed effects are variables whose levels are of primary interest and are consistent and reproducible. In other words, the categories or values of a fixed effect are deliberately chosen and exhaustively represent the conditions you want to study.
 
-**Characteristics:**
+#### Characteristics
 
 * Levels are **fixed and known** (e.g., treatment groups, gender, diet type).
 * Focus is on the **effect of each level** on the outcome.
 * Assumes that the observed levels are the **only levels of interest**.
 
-**Example:**
+#### Example
+
 If we are studying the effect of three diets (`DietA`, `DietB`, `DietC`) on gut microbiome composition, **diet** would be a fixed effect because we are specifically interested in comparing these three diets.
 
 ### 2. Random Effects
 
-**Definition:**
+#### Definition
+
 Random effects are variables where the levels are considered as a **random sample from a larger population**. They account for **unobserved heterogeneity** and repeated measurements, helping control for correlation between observations.
 
-**Characteristics:**
+#### Characteristics
 
 * Levels are **randomly sampled** (e.g., subjects, batches, locations).
 * Focus is on **variability across levels**, not the effect of a specific level.
 * Useful for **hierarchical or repeated-measures data**.
 
-**Example:**
+#### Example
+
 In a study where multiple microbiome samples are taken from each individual, **subject ID** is a random effect. This accounts for individual-specific variability while estimating the effect of diet.
 
 ### Fixed Effects vs Random Effects
