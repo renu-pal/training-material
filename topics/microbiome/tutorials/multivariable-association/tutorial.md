@@ -266,7 +266,7 @@ If more then 2 groups of a effect are present one needs to establish a baseline 
 > - Example, both diagnosis and site variable have more than two levels hence reference can be provided as `diagnosis,CD,site,Cedars-Sinai`.
 {: .comment}
 
-**Additional options** :
+### Additional options
 
 4. **min_abundance** [ Default: 0 ] 
 - The minimum abundance for each feature within a single sample.
@@ -376,8 +376,11 @@ The tool generates the following five major files:
         
         ![Plot1](../../images/Plot-alistipes.shahii-VS-diagnosis-Maaslin2.png "Plot: Alistipes.shahii VS diagnosis ")
         
-The above plot displays the relative abundance of the microbial species **Alistipes shahii** across different **diagnosis** groups: CD (Crohn's Disease), nonIBD (non-Inflammatory Bowel Disease), and UC (Ulcerative Colitis).\
-**Key Components of the Plot:**
+The above plot displays the relative abundance of the microbial species **Alistipes shahii** across different **diagnosis** groups: CD (Crohn's Disease), nonIBD (non-Inflammatory Bowel Disease), and UC (Ulcerative Colitis).
+
+
+### Key Components of the Plot
+
 - **<u>X-axis (Diagnosis)</u>**:\
         Represents the three diagnostic categories:\
             - CD: Crohn’s Disease (n = 474 samples)\
