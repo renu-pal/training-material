@@ -190,7 +190,7 @@ Several tools available on Galaxy can generate outputs that are compatible with 
     - Shared File (OTU Table): Mothur generates a "shared" file that contains the abundance of OTUs across samples, which can be reformatted and used as input to MaAsLin2.
     - Features File: Mothur also outputs taxonomy assignments for OTUs, which can be paired with the shared file.
     - Metadata File: As in QIIME2, metadata is used during the Mothur workflow and can be reused in MaAsLin2.
-3. [**MetaPhlAn (Metagenomic Phylogenetic Analysis)**](https://training.galaxyproject.org/training-material/by-tool/iuc/metaphlan.html) is a tool that provides taxonomic profiling of microbial communities from metagenomic sequencing data. It is available in Galaxy and can generate outputs that are directly compatible with MaAsLin2.\
+3. [**MetaPhlAn (Metagenomic Phylogenetic Analysis)**]({% link by-tool/iuc/metaphlan.md %}) is a tool that provides taxonomic profiling of microbial communities from metagenomic sequencing data. It is available in Galaxy and can generate outputs that are directly compatible with MaAsLin2.\
 **Outputs compatible with MaAsLin2**:
     - Taxonomic Profiles: MetaPhlAn generates taxonomic abundance tables (e.g., relative abundance of microbial taxa at various taxonomic levels) that can be directly used as the feature table for MaAsLin2.
     - Metadata File: As with other tools, the sample metadata used in MetaPhlAn analysis can also be reused in MaAsLin2.
