@@ -379,7 +379,7 @@ The tool generates the following five major files:
 The above plot displays the relative abundance of the microbial species **Alistipes shahii** across different **diagnosis** groups: CD (Crohn's Disease), nonIBD (non-Inflammatory Bowel Disease), and UC (Ulcerative Colitis).
 
 
-### Key Components of the Plot
+## Key Components of the Plot
 
 - **<u>X-axis (Diagnosis)</u>**:\
         Represents the three diagnostic categories:\
