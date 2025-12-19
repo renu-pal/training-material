@@ -12,6 +12,7 @@
         },
         {
             "class": "Person",
+            "identifier": "renu-pal",
             "name": "Renu Pal"
         }
 	],
