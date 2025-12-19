@@ -88,6 +88,13 @@ MaAsLin2 requires the following input files:
 The Features file can contain samples not included in the metadata file (or vice versa). For both cases, those samples not included in both files will be removed from the analysis.
 Also, the samples do not need to be in the same order in the two files.
 
+> <comment-title>MaAslin2 data format</comment-title>
+> MaAslin2 can be picky about the data format. E.g. the values for metadata or features must not contain Nan values. If this is the case
+> the values must be either replace (e.g. for continuous values impute by the mean) or the rows must be excluded from the data.
+> Also, a continuous feature must contain only numbers. Likewise, if the feature should be treated as categroical feature make sure it does not only 
+> contain continuous features (e.g.: replace 0,1 with Yes, No).
+{: .comment}
+
 ## Origin
 In this tutorial, the two input files used are:
 -  `HMP2_taxonomy.tsv` or features file
@@ -239,12 +246,12 @@ In a study where multiple microbiome samples are taken from each individual, **s
 
 If more then 2 groups of a effect are present one needs to establish a baseline or standard feature file category against which other categories are compared, helping to interpret and understand the effects of different variables on microbial features. 
 
-   > <comment-title></comment-title>
-   > - In MaAslin2, the reference level is required for variables with more than two levels to avoid errors. 
-   > - Reference for a variable with more than two levels is provided as a string of `variable,reference`.
-   > - Reference for more than one variable having more than two levels each is provided as a string of `variable1,reference1,variable2,reference2`.
-   > - Example, both diagnosis and site variable have more than two levels hence reference can be provided as `diagnosis,CD,site,Cedars-Sinai`.
-   {: .comment}
+> <comment-title></comment-title>
+> - In MaAslin2, the reference level is required for variables with more than two levels to avoid errors. 
+> - Reference for a variable with more than two levels is provided as a string of `variable,reference`.
+> - Reference for more than one variable having more than two levels each is provided as a string of `variable1,reference1,variable2,reference2`.
+> - Example, both diagnosis and site variable have more than two levels hence reference can be provided as `diagnosis,CD,site,Cedars-Sinai`.
+{: .comment}
 
 **Additional options** :
 
