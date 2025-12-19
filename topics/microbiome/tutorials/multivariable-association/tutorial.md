@@ -179,7 +179,7 @@ MaAsLin2 is designed to analyze various types of **tabular data** for multivaria
 ## Galaxy tools that can generate output for MaAsLin2
 
 Several tools available on Galaxy can generate outputs that are compatible with MaAsLin2, particularly in the context of microbiome data analysis. Following are some Galaxy tools that produce outputs that can be used as input for MaAsLin2:
-1. [**QIIME2**](https://training.galaxyproject.org/training-material/search2?query=Qiime) is a popular tool for processing microbiome data, and Galaxy offers a suite of QIIME2 tools.\
+1. [**QIIME2**]({% link search2?query=Qiime %}) is a popular tool for processing microbiome data, and Galaxy offers a suite of QIIME2 tools.\
 **Outputs compatible with MaAsLin2**:\
     - Feature Table (OTU/ASV table): Generated after steps like DADA2 or Deblur, this table includes the abundance of microbial features in each sample.
     - Taxonomy Assignment: The feature table can be combined with taxonomy information to link ASVs/OTUs to microbial taxa.
