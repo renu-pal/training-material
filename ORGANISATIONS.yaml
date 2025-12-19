@@ -36,14 +36,37 @@ avans-atgm:
     avatar: "/training-material/shared/images/logo-avans.png"
     ror: "015d5s513"
 
+cesnet:
+    name: cesnet
+    joined: 2025-09
+    url: https://www.cesnet.cz/
+
 carpentries:
     name: The Carpentries
     joined: 2021-09
     ror: "0356fgm10"
 
+dsc-bremen:
+    name: Data Science Center
+    url: https://www.dsc-ub.de
+    joined: 2025-05
+    avatar: "/training-material/shared/images/logos/data-science-center-uni-bremen.png"
+
+uni-bremen:
+    name: University of Bremen
+    joined: 2025-05
+    url: https://www.uni-bremen.de/
+    avatar: "/training-material/shared/images/logos/uni-bremen.png"
+
 deNBI:
     name: de.NBI
     url: https://www.denbi.de/
+
+deKCD:
+    name: German Competence Center Cloud Technologies for Data Management and Processing (de.KCD)
+    short_name: "de.KCD"
+    joined: 2025-03
+    url: https://datenkompetenz.cloud/
 
 dfg:
     name:  Deutsche Forschungsgemeinschaft
@@ -104,6 +127,12 @@ embl-ebi:
     github: false
     ror: "02catss52"
 
+epfl:
+    short_name: EPFL
+    name: École Polytechnique Fédérale de Lausanne
+    url: https://www.epfl.ch
+    avatar: https://www.epfl.ch/about/overview/wp-content/themes/wp-theme-2018/assets/svg/epfl-logo.svg
+
 erasmusmc:
     short_name: ErasmusMC
     name: Erasmus Medical Center
@@ -120,6 +149,18 @@ eu:
     github: false
     ror: "019w4f821"
 
+FAIR2Adapt:
+    short_name: FAIR2Adapt
+    name: EOSC | FAIR2Adapt
+    url: https://eosc.eu/eu-project/fair2adapt/
+    avatar: "/training-material/shared/images/logos/FAIR2Adapt.png"
+
+fiesta:
+    short_name: OSCARS-FIESTA
+    name: FAIR Image Analysis across Sciences
+    url: https://oscars-project.eu/projects/fair-image-analysis-across-sciences
+    avatar: "/training-material/shared/images/logos/logo-FIESTA.png"
+    
 find:
     short_name: FIND
     name: The Foundation for Innovative New Diagnostics
@@ -205,6 +246,18 @@ madland:
     url: https://madland.science
     avatar: "/training-material/shared/images/logo-madland.jpg"
 
+melbournebioinformatics:
+    name: Melbourne Bioinformatics
+    url: https://mdhs.unimelb.edu.au/melbournebioinformatics
+    avatar: "/training-material/shared/images/Melbourne-Bioinformatics-logo.png"
+
+metabohub:
+    name: MetaboHUB
+    github: false
+    joined: 2025-07
+    url: https://www.metabohub.fr/
+    avatar: "/training-material/shared/images/metabohub.png"
+
 moffitt:
     name: Moffitt Cancer Center
     url: https://www.moffitt.org/
@@ -257,6 +310,13 @@ nsf:
     avatar: "/training-material/shared/images/nsf.gif"
     github: false
 
+ou:
+    short_name: OU
+    name: The Open University
+    bio: As the largest university in Europe, we are committed to delivering highly accredited, distance learning degrees, and supporting all students to achieve their academic dreams.
+    url: https://www.open.ac.uk
+    avatar: "/training-material/shared/images/logos/logo_ou.png"
+
 panacea:
     short_name: PanACEA
     name: Pan-African Consortium for the Evaluation of Antituberculosis Antibiotics
@@ -270,6 +330,12 @@ pangens:
     url: https://pangens.org/
     avatar: "/training-material/shared/images/pangens.jpg"
     github: false
+
+upcite:
+    short_name: UPCité
+    name: Université Paris Cité
+    url: https://u-paris.fr/
+    avatar: https://u-paris.fr/wp-content/uploads/2025/01/universite-paris-cite-5-ans.png
 
 petermac:
     short_name: PeterMac
@@ -299,6 +365,13 @@ qiime2:
     url: https://qiime2.org/
     avatar: https://avatars.githubusercontent.com/u/18176583?s=200&v=4
 
+rfmf:
+    name: Réseau Francophone de Metabolomique et Fluxomique
+    short_name: RFMF
+    github: false
+    joined: 2025-07
+    url: https://www.rfmf.fr/
+    avatar: "/training-material/shared/images/rfmf.png"
 
 sanbi:
     short_name: SANBI/UWC
@@ -336,6 +409,13 @@ societyprotectionundergroundnetworks:
     description: "SPUN is a scientific research organization founded to map mycorrhizal fungal communities and advocate for their protection."
     url: "https://www.spun.earth"
     avatar: "/training-material/shared/images/spun-logo.png"
+
+spoc:
+    short_name: 🖖🏾SPOC
+    name: 🖖🏾Single-cell & sPatial Omics Community of practice
+    bio: We are a mix of users, developers, and trainers providing feedback and energy to improve and expand the Galaxy single cell and spatial omics capabilities.
+    url: https://galaxyproject.org/community/sig/singlecell/
+    avatar: "/training-material/shared/images/logos/spoc_hand.png"
 
 swiss-tph:
     short_name: SwissTPH
@@ -383,6 +463,22 @@ uni-freiburg:
     github: false
     ror: "0245cg223"
 
+uni-graz:
+    name: University of Graz
+    joined: 2025-09
+    url: https://www.uni-graz.at/en/
+
+
+uni-manchester:
+    name: University of Manchester
+    joined: 2025-08
+    url: https://www.manchester.ac.uk/
+
+unimelb:
+    name: The University of Melbourne
+    url: https://www.unimelb.edu.au
+    avatar: "/training-material/shared/images/unimelb_Logo_RGB.png"    
+
 UTas:
     short_name: UTas
     name: University of Tasmania
@@ -398,4 +494,3 @@ vib:
     avatar: "/training-material/shared/images/logo-vib.png"
     github: false
     ror: "03xrhmk39"
-
