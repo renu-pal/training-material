@@ -185,7 +185,7 @@ Several tools available on Galaxy can generate outputs that are compatible with 
     - Taxonomy Assignment: The feature table can be combined with taxonomy information to link ASVs/OTUs to microbial taxa.
     - Metadata Files: QIIME2 requires metadata to perform analyses, and the same metadata file can be formatted and used in MaAsLin2.
     
-2. [**Mothur**](https://training.galaxyproject.org/training-material/search2?query=mothur) is another widely used microbiome data analysis tool available in Galaxy, and it can be used to produce inputs for MaAsLin2.\
+2. [**Mothur**]({% link search2?query=mothur %}) is another widely used microbiome data analysis tool available in Galaxy, and it can be used to produce inputs for MaAsLin2.\
 **Outputs compatible with MaAsLin2**:
     - Shared File (OTU Table): Mothur generates a "shared" file that contains the abundance of OTUs across samples, which can be reformatted and used as input to MaAsLin2.
     - Features File: Mothur also outputs taxonomy assignments for OTUs, which can be paired with the shared file.
