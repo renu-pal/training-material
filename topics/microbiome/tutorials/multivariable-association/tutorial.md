@@ -13,7 +13,7 @@ tags:
 level: Introductory
 zenodo_link: https://zenodo.org/records/12614561
 questions:
-- How do I find associations between microbial features and specific metadata variables?
+- How do I find associations between (microbial) features and specific metadata variables?
 objectives:
 - Identify statistically significant associations between microbial features and metadata variables (such as clinical conditions, environmental factors, or demographic information) in microbiome data.
 - Uncover potential biomarkers associated with specific disease states.
@@ -25,7 +25,16 @@ contributions:
    editing:
     - shiltemann
 ---
+
 # Microbiome Association Detection with MaAsLin2
+
+The convincing part of any study that detects "features", being it genes, microbial abundance or anything really, is to explain how those features are 
+related to biological meaning (e.g. you metadata). This is what you are supposed to write in a paper about you study! But doing 
+this the statistical sound way is not streight forward - which might screw you up in the paper review process. So pay attention in this tutorial since
+MaAslin2 can be seen as a swiss army knife for multivariable association and provide 
+insight into feature metadata association for almost any feature table you might encounter !
+
+## Importance of identifying associations
 
 The importance of identifying associations between microbial features and metadata variables using tools like MaAsLin2 lies in several key areas:
 
